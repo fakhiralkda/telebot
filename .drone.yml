@@ -8,8 +8,8 @@ steps:
     image: "ubuntu:20.04"
     commands:
       - apt update -qqy && apt install git -qqy
-      - git clone $GIT_REPO_PRIV -b slam-new bot -q
-      - cd bot || exit
+      - git clone $GIT_REPO_PRIV
+      - cd ar* || exit
       - docker build . -t bot
       - docker run bot
     environment: 
