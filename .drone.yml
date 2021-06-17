@@ -7,11 +7,7 @@ steps:
   - name: Tele
     image: "ubuntu:20.04"
     commands:
-      - apt update -qqy && apt install git -qqy
-      - git clone $GIT_REPO_PRIV
-      - cd ar* || exit
-      - docker build . -t bot
-      - docker run bot
+      - "chmod +x bot.sh && bash bot.sh"
     environment: 
       GIT_REPO_PRIV:
         from_secret: GIT_REPO_PRIV
