@@ -1,0 +1,16 @@
+name: Dispatcher Build
+
+on:
+  workflow_dispatch
+
+jobs:
+  starter:
+    name: TeleBot
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bot
+        run: |
+          chmod +x bot.sh
+          bash bot.sh
+        env:
+          GIT_REPO_PRIV: ${{ secrets.GIT_REPO_PRIV }}
