@@ -8,7 +8,7 @@ jobs:
     name: TeleBot
     runs-on: ubuntu-latest
     steps:
-      - uses: rokibhasansagar/slimhub_actions@main
+      #- uses: rokibhasansagar/slimhub_actions@main
       - uses: actions/checkout@v2
       - name: Bot
         run: |
